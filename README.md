@@ -6,4 +6,4 @@
 	
 | \# | Problem       | Difficulty  | 
 |:-------:|:--------------|:------:|
-|1|[Two Sum](https://leetcode.com/problems/two-sum/description/)|Easy|
+|1|[Two Sum](/src/main/java/com/jelly/code/leetcode/TwoSumSolution.java)|Easy|
