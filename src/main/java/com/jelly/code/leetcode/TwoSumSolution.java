@@ -81,6 +81,9 @@ public class TwoSumSolution {
         }
     }
 
+    /**
+     * 解决方案实现
+     */
     static class Solution {
 
         private static final int MIN_LENGTH = 2;
@@ -112,7 +115,7 @@ public class TwoSumSolution {
          *     2. map 初始化时可以指定初始大小为 nums.length ,当输入 nums 长度大于默认 map size 而匹配结果又在 12 之后会触发 map 扩容
          * </pre>
          */
-        public int[] twoSumPrefec(int[] nums, int target) {
+        public int[] twoSumPrefect(int[] nums, int target) {
             int[] res = new int[2];
             if (nums == null || nums.length < MIN_LENGTH) {
                 return res;
