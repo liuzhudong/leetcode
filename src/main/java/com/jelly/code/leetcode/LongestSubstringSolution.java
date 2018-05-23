@@ -92,7 +92,7 @@ public class LongestSubstringSolution {
             Set<String> set = new HashSet<>(size);
             Queue<String> queue = new LinkedList<>();
             int maxLength = 0;
-            
+
             for (String str : strs) {
 
                 if (set.contains(str)) {
@@ -115,6 +115,32 @@ public class LongestSubstringSolution {
 
             }
             return queue.size() > maxLength ? queue.size() : maxLength;
+        }
+
+        /**
+         * 参考最快执行代码修改
+         */
+        int lengthOfLongestSubstring1(String s) {
+            if (s.length() <= 1) {
+                return s.length();
+            }
+
+            int left = 0, right = 0, index;
+            String max = "", curr = "";
+
+            for (; right < s.length(); ) {
+                index = curr.indexOf(s.charAt(right));
+                if (index > -1) {
+                    left = left + index + 1;
+                }
+                right++;
+                curr = s.substring(left, right);
+                max = max.length() > curr.length() ? max : curr;
+
+            }
+
+            return max.length();
+
         }
     }
 
